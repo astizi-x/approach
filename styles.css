@@ -1035,8 +1035,36 @@ th {
 }
 
 .dont-card {
-  border-color: rgba(255, 176, 32, 0.34);
-  background: rgba(255, 176, 32, 0.08);
+  border-color: rgba(224, 72, 72, 0.28);
+  background: rgba(224, 72, 72, 0.07);
+}
+
+.do-card span,
+.dont-card span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin-bottom: 16px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.do-card span {
+  background: rgba(20, 164, 108, 0.12);
+  color: #087a4c;
+}
+
+.dont-card span {
+  background: rgba(224, 72, 72, 0.12);
+  color: #b83232;
+}
+
+.do-card h3,
+.dont-card h3 {
+  margin-bottom: 8px;
 }
 
 .no-results {
@@ -2614,18 +2642,41 @@ body {
     display: none;
   }
 
-  body.search-open .brand {
-    display: none;
-  }
-
   body.search-open .search,
   .search:focus-within {
-    width: calc(100vw - 76px) !important;
-    max-width: calc(100vw - 76px) !important;
+    width: min(190px, calc(100vw - 178px)) !important;
+    max-width: min(190px, calc(100vw - 178px)) !important;
   }
 
   .content {
     padding: 18px 12px 52px !important;
+  }
+}
+
+/* Final header fix: the approach logo must remain visible on tablet/mobile. */
+@media (max-width: 1100px) {
+  .topbar .brand,
+  body.search-open .topbar .brand {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .topbar .brand span:last-child {
+    min-width: 0;
+  }
+}
+
+/* Keep the product-system logo visible in tablet and mobile headers. */
+@media (max-width: 1100px) {
+  .topbar .brand {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .topbar .brand span:last-child {
+    min-width: 0;
   }
 }
 
@@ -3668,17 +3719,405 @@ body {
     display: none;
   }
 
-  body.search-open .brand {
-    display: none;
-  }
-
   body.search-open .search,
   .search:focus-within {
-    width: calc(100vw - 76px) !important;
-    max-width: calc(100vw - 76px) !important;
+    width: min(190px, calc(100vw - 178px)) !important;
+    max-width: min(190px, calc(100vw - 178px)) !important;
   }
 
   .content {
     padding: 18px 12px 52px !important;
+  }
+}
+
+/* Final header fix: keep the approach logo visible on tablet/mobile. */
+@media (max-width: 1100px) {
+  .topbar .brand,
+  body.search-open .topbar .brand {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .topbar .brand span:last-child {
+    min-width: 0;
+  }
+}
+
+/* Palette page: full-width brand color bands and logo placeholder. */
+#colors .color-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  width: 100%;
+  margin-top: 34px;
+}
+
+#colors .swatch {
+  min-height: 206px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: end;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(26, 26, 26, 0.05);
+}
+
+#colors .swatch span {
+  width: 100%;
+  height: 112px;
+  min-height: 0;
+  margin: 0 0 8px;
+  border-radius: 14px;
+}
+
+#colors .swatch strong {
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.05;
+}
+
+#colors .swatch small {
+  justify-self: start;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo-placeholder {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 28px;
+  border: 1.5px dashed #cfd8df;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff, #f7fafc);
+  color: var(--muted);
+  text-align: center;
+}
+
+.logo-placeholder span {
+  display: block;
+  color: var(--carbon);
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 850;
+}
+
+.logo-placeholder small {
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  #colors .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #colors .swatch {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    min-height: auto;
+    padding: 12px;
+  }
+
+  #colors .swatch span {
+    width: 100%;
+    height: 112px;
+  }
+
+  #colors .swatch small {
+    justify-self: start;
+  }
+}
+
+/* Final layout polish: spacing, responsive rhythm and content sizing. */
+:where(.doc-section) {
+  padding-block: clamp(44px, 6vw, 72px);
+}
+
+:where(.hero-section) {
+  padding-top: clamp(36px, 5vw, 56px);
+}
+
+.content,
+.page-shell,
+.main-layout,
+.main-content {
+  min-width: 0;
+}
+
+.lead {
+  max-width: 920px;
+  line-height: 1.55;
+}
+
+.doc-block {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.guideline-grid,
+.article-grid,
+.do-dont-grid {
+  gap: 18px;
+}
+
+.guideline-card,
+.article-card,
+.do-card,
+.dont-card,
+.logo-lab,
+.voice-list,
+.spec-table {
+  border-radius: 18px;
+}
+
+.guideline-card,
+.article-card,
+.do-card,
+.dont-card {
+  min-height: 168px;
+  padding: clamp(20px, 2.4vw, 28px);
+}
+
+.spec-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 18px 20px;
+  vertical-align: top;
+}
+
+.brand-spec {
+  align-items: stretch;
+  gap: 18px;
+}
+
+.logo-lab,
+.voice-list {
+  min-height: 320px;
+}
+
+.logo-placeholder {
+  min-height: 230px;
+}
+
+#colors .color-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+#colors .swatch {
+  min-width: 0;
+  min-height: 218px;
+  padding: 16px;
+}
+
+#colors .swatch span {
+  height: 120px;
+}
+
+#colors .swatch strong {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1100px) {
+  .topbar .brand,
+  body.search-open .topbar .brand {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .topbar .brand small {
+    max-width: 82px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .content,
+  .main-content {
+    padding-inline: clamp(14px, 3vw, 28px) !important;
+  }
+
+  .brand-spec,
+  .article-grid,
+  .guideline-grid,
+  .do-dont-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  #colors .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #colors .swatch {
+    min-height: 148px;
+    grid-template-columns: 160px minmax(0, 1fr) auto;
+    align-items: center;
+    align-content: center;
+  }
+
+  #colors .swatch span {
+    width: 160px;
+    height: 104px;
+    margin: 0;
+  }
+
+  #colors .swatch strong {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+}
+
+@media (max-width: 720px) {
+  .doc-section {
+    padding-block: 36px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .visual-sample,
+  .brand-spec,
+  .article-grid,
+  .guideline-grid,
+  .do-dont-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .guideline-card,
+  .article-card,
+  .do-card,
+  .dont-card {
+    min-height: auto;
+  }
+
+  .logo-lab,
+  .voice-list {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .logo-placeholder {
+    min-height: 190px;
+  }
+}
+
+@media (max-width: 520px) {
+  #colors .swatch {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #colors .swatch span {
+    width: 100%;
+    height: 112px;
+  }
+
+  .topbar .brand {
+    flex: 1 1 auto;
+  }
+
+  .topbar .brand strong {
+    font-size: 15px;
+  }
+}
+
+.site-footer {
+  margin-top: clamp(28px, 5vw, 56px);
+  padding: 22px 0 30px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  background: transparent;
+  border: 0;
+}
+
+.home-page .site-footer {
+  padding-inline: 4px;
+}
+
+@media (max-width: 720px) {
+  .site-footer {
+    margin-top: 28px;
+    padding-bottom: 24px;
+  }
+}
+
+/* Offline site search. */
+.topbar-actions {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 90;
+  width: min(420px, calc(100vw - 32px));
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 22px 70px rgba(26, 26, 26, 0.14);
+}
+
+.search-results[hidden] {
+  display: none;
+}
+
+.search-result {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  color: var(--carbon);
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.search-result:hover,
+.search-result:focus-visible {
+  background: var(--soft);
+  outline: 0;
+}
+
+.search-result span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.search-result strong {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.search-result.empty {
+  color: var(--muted);
+  cursor: default;
+}
+
+.search-result.empty:hover {
+  background: transparent;
+}
+
+@media (max-width: 920px) {
+  .search-results {
+    position: fixed;
+    top: calc(var(--topbar) + 10px);
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-height: min(420px, calc(100dvh - var(--topbar) - 24px));
+    overflow: auto;
   }
 }

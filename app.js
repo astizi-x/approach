@@ -13,6 +13,56 @@
   const componentPreview = document.querySelector("#componentPreview");
   const navGroups = Array.from(document.querySelectorAll(".nav-section"));
   const currentPage = location.pathname.split("/").pop() || "index.html";
+  const siteSearchIndex = [
+    {
+      title: "Главная",
+      section: "approach",
+      url: "index.html",
+      text: "дизайн-система продуктов ИДМ-ПЛЮС бренд визуальный язык типографика палитра материалы для коммуникаций"
+    },
+    {
+      title: "Визуальный язык",
+      section: "Дизайнеру",
+      url: "visual-language.html",
+      text: "визуальный язык ИДМ-ПЛЮС принципы композиция рабочее поле голубой акцент технологичность"
+    },
+    {
+      title: "Типографика",
+      section: "Дизайнеру",
+      url: "typography.html",
+      text: "типографика ИДМ-ПЛЮС Montserrat Roboto Roboto Condensed иерархия правила набора текст"
+    },
+    {
+      title: "Палитра",
+      section: "Дизайнеру",
+      url: "colors.html",
+      text: "палитра ИДМ-ПЛЮС цвета #00BFF3 #9BA2A7 #FFFFFF cyan gray white"
+    },
+    {
+      title: "Бренд",
+      section: "Менеджеру",
+      url: "brand.html",
+      text: "бренд ИДМ-ПЛЮС электронный брендбук позиционирование тон коммуникации логотип материалы"
+    },
+    {
+      title: "Скачать логотипы",
+      section: "Менеджеру",
+      url: "logos.html",
+      text: "логотипы ИДМ-ПЛЮС скачать SVG PNG PDF бренд материалы правила"
+    },
+    {
+      title: "Скачать иконки",
+      section: "Менеджеру",
+      url: "download-icons.html",
+      text: "иконки ИДМ-ПЛЮС скачать SVG PNG интерфейс презентации схемы документы"
+    },
+    {
+      title: "Обновления",
+      section: "История",
+      url: "changelog.html",
+      text: "обновления история версий approach новые материалы дизайн-система ИДМ-ПЛЮС"
+    }
+  ];
 
   if (navToggle) {
     navToggle.addEventListener("click", () => {
@@ -24,23 +74,94 @@
   }
 
   if (searchShell && searchInput) {
+    const searchResults = document.createElement("div");
+    searchResults.className = "search-results";
+    searchResults.hidden = true;
+    searchResults.setAttribute("role", "listbox");
+    searchResults.setAttribute("aria-label", "Результаты поиска");
+    searchShell.insertAdjacentElement("afterend", searchResults);
+
+    const normalize = (value) => value.toLowerCase().replace(/ё/g, "е").trim();
+
+    const closeSearchResults = () => {
+      searchResults.hidden = true;
+      searchResults.innerHTML = "";
+    };
+
+    const renderSearchResults = () => {
+      const query = normalize(searchInput.value);
+      const tokens = query.split(/\s+/).filter(Boolean);
+
+      if (!tokens.length) {
+        closeSearchResults();
+        return;
+      }
+
+      const matches = siteSearchIndex
+        .map((item) => {
+          const haystack = normalize(`${item.title} ${item.section} ${item.text}`);
+          const score = tokens.reduce((sum, token) => sum + (haystack.includes(token) ? 1 : 0), 0);
+          return { ...item, score };
+        })
+        .filter((item) => item.score > 0)
+        .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title, "ru"))
+        .slice(0, 6);
+
+      searchResults.innerHTML = matches.length
+        ? matches
+            .map(
+              (item) => `
+                <a class="search-result" href="${item.url}" role="option">
+                  <span>${item.section}</span>
+                  <strong>${item.title}</strong>
+                </a>
+              `
+            )
+            .join("")
+        : `<div class="search-result empty"><span>Ничего не найдено</span><strong>Попробуйте другой запрос</strong></div>`;
+
+      searchResults.hidden = false;
+    };
+
     searchShell.addEventListener("click", () => {
       if (window.matchMedia("(max-width: 920px)").matches) {
         body.classList.add("search-open");
       }
       searchInput.focus();
+      renderSearchResults();
     });
 
     searchInput.addEventListener("focus", () => {
       if (window.matchMedia("(max-width: 920px)").matches) {
         body.classList.add("search-open");
       }
+      renderSearchResults();
     });
 
     searchInput.addEventListener("blur", () => {
       if (!searchInput.value.trim()) {
         window.setTimeout(() => body.classList.remove("search-open"), 120);
       }
+    });
+
+    searchInput.addEventListener("input", renderSearchResults);
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        const firstResult = searchResults.querySelector("a");
+        if (firstResult) {
+          window.location.href = firstResult.getAttribute("href");
+        }
+      }
+
+      if (event.key === "Escape") {
+        closeSearchResults();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".search") || event.target.closest(".search-results")) return;
+      closeSearchResults();
     });
   }
 
