@@ -2073,6 +2073,1011 @@ body {
   line-height: 1.25;
 }
 
+.nav-section.is-current .nav-section-trigger {
+  color: var(--blue-active);
+  background: #eef7ff;
+}
+
+.nav-section.is-current .nav-section-trigger::before {
+  border-color: var(--blue);
+  background: url("assets/file-and-folder.svg") center / contain no-repeat !important;
+}
+
+.side-nav .nav-section-list a.active {
+  color: var(--blue-active);
+  background: #eef7ff;
+  font-weight: 850;
+}
+
+.side-nav .nav-section-list a.active::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+@media (max-width: 920px) {
+  :root {
+    --sidebar: 100%;
+  }
+
+  .app-shell {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 18px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 18px;
+  }
+
+  .side-nav {
+    gap: 8px;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 48px !important;
+  }
+
+  .nav-section-list {
+    padding-left: 44px !important;
+  }
+
+  .nav-section-list::before {
+    left: 22px !important;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: block;
+    height: auto;
+    padding: 14px 16px;
+    background: #fbfbfb;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding: 22px 16px 56px;
+  }
+
+  .image-hero img {
+    border-radius: 18px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(58px, 18vw, 108px);
+  }
+
+  .role-card-grid,
+  .scene-grid,
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .component-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .role-card-grid .menu-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Responsive system: desktop, laptop, tablet, phone */
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px 64px 88px !important;
+  }
+
+  .image-hero img {
+    max-height: 560px;
+  }
+
+  .role-card-grid .menu-card {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --sidebar: 260px;
+  }
+
+  .app-shell {
+    grid-template-columns: 260px minmax(0, 1fr) !important;
+  }
+
+  .sidebar {
+    padding-inline: 14px !important;
+  }
+
+  .content {
+    padding: 28px 34px 64px !important;
+  }
+
+  .role-card-grid {
+    gap: 18px;
+  }
+
+  .role-card-grid .menu-card {
+    padding: 30px;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: clamp(28px, 3vw, 42px);
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+  }
+
+  .content {
+    padding: 24px 28px 56px !important;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(64px, 12vw, 118px);
+  }
+}
+
+@media (max-width: 920px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .topbar {
+    grid-column: auto !important;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .side-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .side-nav::before {
+    grid-column: 1 / -1;
+  }
+
+  .nav-section-list {
+    padding-left: 42px !important;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-hero,
+  .dashboard-content {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    padding: 12px !important;
+  }
+
+  .sidebar {
+    padding: 14px 12px !important;
+  }
+
+  .side-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 18px 12px 48px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(54px, 20vw, 88px);
+  }
+
+  .dashboard-hero p {
+    font-size: 16px;
+  }
+
+  .role-card-grid,
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .do-dont-grid,
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .role-card-grid .menu-card,
+  .role-card-grid .menu-card:last-child {
+    grid-column: auto;
+  }
+
+  .role-card-grid .menu-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .type-scale > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar-logo {
+    margin-bottom: 14px;
+  }
+
+  .sidebar-logo span:last-child {
+    font-size: 18px;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 46px !important;
+    font-size: 15px !important;
+  }
+
+  .side-nav .nav-section-list a {
+    font-size: 14px !important;
+  }
+
+  .search {
+    height: 40px;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: 30px;
+  }
+}
+
+/* Tablet/mobile navigation */
+@media (max-width: 1100px) {
+  :root {
+    --topbar: 64px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  body.nav-open::before {
+    content: "";
+    position: fixed;
+    inset: var(--topbar) 0 0 0;
+    z-index: 49;
+    background: rgba(26, 26, 26, 0.18);
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+    min-height: 100vh;
+  }
+
+  .topbar {
+    position: sticky !important;
+    top: 0;
+    z-index: 80;
+    height: var(--topbar) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand strong {
+    font-size: 16px;
+  }
+
+  .brand small {
+    font-size: 11px;
+  }
+
+  .topbar-actions {
+    width: auto !important;
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+    display: grid !important;
+    place-items: center;
+    padding: 0;
+    border-radius: 14px;
+    border-color: #dedede;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.06);
+    cursor: pointer;
+  }
+
+  .nav-toggle {
+    position: relative;
+  }
+
+  .nav-toggle span {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: #1a1a1a;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .nav-toggle span:nth-child(1) {
+    transform: translateY(-6px);
+  }
+
+  .nav-toggle span:nth-child(3) {
+    transform: translateY(6px);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .search {
+    width: 44px !important;
+    max-width: 44px !important;
+    height: 44px;
+    flex: 0 0 44px;
+    justify-content: center;
+    gap: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    border-color: #dedede;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.06);
+    cursor: text;
+    transition: width 180ms ease, max-width 180ms ease, padding 180ms ease;
+  }
+
+  .search > span {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    color: #1a1a1a;
+  }
+
+  .search input {
+    position: absolute;
+    width: 1px !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.search-open .search,
+  .search:focus-within {
+    width: min(264px, calc(100vw - 128px)) !important;
+    max-width: min(264px, calc(100vw - 128px)) !important;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 0 12px !important;
+  }
+
+  body.search-open .search input,
+  .search:focus-within input {
+    position: static;
+    width: 100% !important;
+    min-width: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar {
+    position: fixed !important;
+    top: var(--topbar) !important;
+    left: 0 !important;
+    z-index: 60;
+    width: min(326px, 86vw) !important;
+    height: calc(100dvh - var(--topbar)) !important;
+    padding: 18px 14px 24px !important;
+    overflow-y: auto;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 0;
+    background: #ffffff;
+    box-shadow: 28px 0 60px rgba(26, 26, 26, 0.16);
+    transform: translateX(-108%) !important;
+    transition: transform 220ms ease;
+  }
+
+  body.nav-open .sidebar {
+    transform: translateX(0) !important;
+  }
+
+  .sidebar-logo {
+    display: none !important;
+  }
+
+  .side-nav {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 52px !important;
+  }
+
+  .content {
+    padding: 24px 18px 60px !important;
+  }
+
+  .toc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    padding-inline: 10px !important;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  body.search-open .brand {
+    display: none;
+  }
+
+  body.search-open .search,
+  .search:focus-within {
+    width: calc(100vw - 76px) !important;
+    max-width: calc(100vw - 76px) !important;
+  }
+
+  .content {
+    padding: 18px 12px 52px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .sidebar {
+    padding-inline: 12px;
+  }
+
+  .content {
+    padding-inline: 12px;
+  }
+
+  .role-card-grid .menu-card {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: 34px;
+  }
+
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Last responsive pass: keep these rules after legacy mobile overrides. */
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px 64px 88px !important;
+  }
+
+  .image-hero img {
+    max-height: 560px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 921px) {
+  .app-shell {
+    grid-template-columns: 260px minmax(0, 1fr) !important;
+  }
+
+  .content {
+    padding: 28px 34px 64px !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 921px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 920px) and (min-width: 721px) {
+  .side-nav,
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 920px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .sidebar {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: block;
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding: 22px 16px 56px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .side-nav,
+  .role-card-grid,
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .content {
+    padding: 18px 12px 48px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(54px, 20vw, 88px);
+  }
+
+  .dashboard-hero p {
+    font-size: 16px;
+  }
+
+  .role-card-grid .menu-card,
+  .role-card-grid .menu-card:last-child {
+    grid-column: auto;
+    min-height: auto;
+  }
+
+  .type-scale > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    padding-inline: 12px !important;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 46px !important;
+    font-size: 15px !important;
+  }
+
+  .side-nav .nav-section-list a {
+    font-size: 14px !important;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: 30px;
+  }
+}
+
+/* Final responsive normalization */
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px 64px 88px !important;
+  }
+
+  .image-hero img {
+    max-height: 560px;
+  }
+
+  .role-card-grid .menu-card {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --sidebar: 260px;
+  }
+
+  .app-shell {
+    grid-template-columns: 260px minmax(0, 1fr) !important;
+  }
+
+  .sidebar {
+    padding-inline: 14px !important;
+  }
+
+  .content {
+    padding: 28px 34px 64px !important;
+  }
+
+  .role-card-grid {
+    gap: 18px;
+  }
+
+  .role-card-grid .menu-card {
+    padding: 30px;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: clamp(28px, 3vw, 42px);
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+  }
+
+  .content {
+    padding: 24px 28px 56px !important;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(64px, 12vw, 118px);
+  }
+}
+
+@media (max-width: 920px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .sidebar {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: block;
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding: 22px 16px 56px !important;
+  }
+
+  .side-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .side-nav::before {
+    grid-column: 1 / -1;
+  }
+
+  .nav-section-list {
+    padding-left: 42px !important;
+  }
+
+  .nav-section-list::before {
+    left: 22px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .side-nav {
+    grid-template-columns: 1fr !important;
+  }
+
+  .content {
+    padding: 18px 12px 48px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(54px, 20vw, 88px);
+  }
+
+  .dashboard-hero p {
+    font-size: 16px;
+  }
+
+  .role-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .role-card-grid .menu-card,
+  .role-card-grid .menu-card:last-child {
+    grid-column: auto;
+  }
+
+  .role-card-grid .menu-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .type-scale > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    padding-inline: 12px !important;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 14px;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 46px !important;
+    font-size: 15px !important;
+  }
+
+  .side-nav .nav-section-list a {
+    font-size: 14px !important;
+  }
+
+  .search {
+    height: 40px;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: 30px;
+  }
+}
+
+/* Final responsive pass */
+@media (min-width: 1440px) {
+  .content { padding: 40px 64px 88px !important; }
+  .image-hero img { max-height: 560px; }
+}
+
+@media (max-width: 1280px) and (min-width: 921px) {
+  .app-shell { grid-template-columns: 260px minmax(0, 1fr) !important; }
+  .content { padding: 28px 34px 64px !important; }
+  .role-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 18px; }
+  .role-card-grid .menu-card { padding: 28px; }
+}
+
+@media (max-width: 1100px) and (min-width: 921px) {
+  .app-shell { grid-template-columns: 240px minmax(0, 1fr) !important; }
+  .role-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .role-card-grid .menu-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 920px) and (min-width: 721px) {
+  .role-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .role-card-grid .menu-card:last-child { grid-column: 1 / -1; }
+  .side-nav { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 720px) {
+  .app-shell { display: block !important; }
+  .sidebar {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 14px 12px !important;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .topbar { height: auto !important; padding: 12px !important; }
+  .topbar-actions, .search { width: 100% !important; }
+  .content { padding: 18px 12px 48px !important; }
+  .side-nav, .role-card-grid, .article-grid, .guideline-grid, .brand-spec, .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .role-card-grid .menu-card,
+  .role-card-grid .menu-card:last-child {
+    grid-column: auto;
+  }
+  .image-hero img { aspect-ratio: 4 / 3; border-radius: 18px; }
+  .dashboard-hero h1 { font-size: clamp(54px, 20vw, 88px); }
+}
+
+@media (max-width: 420px) {
+  .role-card-grid .menu-card { padding: 22px; border-radius: 20px; }
+  .role-card-grid .menu-card h3 { font-size: 30px; }
+  .nav-section-trigger, .nav-standalone { min-height: 46px !important; font-size: 15px !important; }
+}
+
 /* Final navigation alignment */
 .side-nav {
   --nav-x: 14px;
@@ -2205,4 +3210,475 @@ body {
   padding-left: 48px !important;
   padding-right: 10px !important;
   font-size: 16px !important;
+}
+
+/* Current location and mobile overrides */
+.nav-section.is-current .nav-section-trigger {
+  color: var(--blue-active) !important;
+  background: #eef7ff !important;
+}
+
+.side-nav .nav-section-list a.active {
+  color: var(--blue-active) !important;
+  background: #eef7ff !important;
+  font-weight: 850 !important;
+}
+
+.side-nav .nav-section-list a.active::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+@media (max-width: 920px) {
+  .app-shell {
+    display: block !important;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: block;
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding: 22px 16px 56px !important;
+  }
+
+  .image-hero img {
+    border-radius: 18px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .role-card-grid,
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Last responsive pass: keep these rules after legacy mobile overrides. */
+@media (min-width: 1440px) {
+  .content {
+    padding: 40px 64px 88px !important;
+  }
+
+  .image-hero img {
+    max-height: 560px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 921px) {
+  .app-shell {
+    grid-template-columns: 260px minmax(0, 1fr) !important;
+  }
+
+  .content {
+    padding: 28px 34px 64px !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 921px) {
+  .app-shell {
+    grid-template-columns: 240px minmax(0, 1fr) !important;
+  }
+
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 920px) and (min-width: 721px) {
+  .side-nav,
+  .role-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .role-card-grid .menu-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 920px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .sidebar {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    padding: 18px 16px !important;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    box-shadow: none;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: block;
+    height: auto;
+    padding: 14px 16px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding: 22px 16px 56px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .side-nav,
+  .role-card-grid,
+  .article-grid,
+  .guideline-grid,
+  .brand-spec,
+  .color-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .content {
+    padding: 18px 12px 48px !important;
+  }
+
+  .image-hero img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dashboard-hero h1 {
+    font-size: clamp(54px, 20vw, 88px);
+  }
+
+  .dashboard-hero p {
+    font-size: 16px;
+  }
+
+  .role-card-grid .menu-card,
+  .role-card-grid .menu-card:last-child {
+    grid-column: auto;
+    min-height: auto;
+  }
+
+  .type-scale > div {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sidebar {
+    padding-inline: 12px !important;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 46px !important;
+    font-size: 15px !important;
+  }
+
+  .side-nav .nav-section-list a {
+    font-size: 14px !important;
+  }
+
+  .role-card-grid .menu-card h3 {
+    font-size: 30px;
+  }
+}
+
+/* Final tablet/mobile header and drawer override */
+@media (max-width: 1100px) {
+  :root {
+    --topbar: 64px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  body.nav-open::before {
+    content: "";
+    position: fixed;
+    inset: var(--topbar) 0 0 0;
+    z-index: 49;
+    background: rgba(26, 26, 26, 0.18);
+  }
+
+  .app-shell {
+    display: block !important;
+    width: 100% !important;
+    min-height: 100vh;
+  }
+
+  .topbar {
+    position: sticky !important;
+    top: 0;
+    z-index: 80;
+    height: var(--topbar) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px !important;
+    background: rgba(255, 255, 255, 0.98);
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand strong {
+    font-size: 16px;
+  }
+
+  .brand small {
+    font-size: 11px;
+  }
+
+  .topbar-actions {
+    width: auto !important;
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .icon-button {
+    width: 44px;
+    height: 44px;
+    display: grid !important;
+    place-items: center;
+    padding: 0;
+    border-radius: 14px;
+    border-color: #dedede;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.06);
+    cursor: pointer;
+  }
+
+  .nav-toggle {
+    position: relative;
+  }
+
+  .nav-toggle span {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: #1a1a1a;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
+  .nav-toggle span:nth-child(1) {
+    transform: translateY(-6px);
+  }
+
+  .nav-toggle span:nth-child(3) {
+    transform: translateY(6px);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  body.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.nav-open .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .search {
+    width: 44px !important;
+    max-width: 44px !important;
+    height: 44px;
+    flex: 0 0 44px;
+    justify-content: center;
+    gap: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    border-color: #dedede;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.06);
+    cursor: text;
+    transition: width 180ms ease, max-width 180ms ease, padding 180ms ease;
+  }
+
+  .search > span {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    color: #1a1a1a;
+  }
+
+  .search input {
+    position: absolute;
+    width: 1px !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.search-open .search,
+  .search:focus-within {
+    width: min(264px, calc(100vw - 128px)) !important;
+    max-width: min(264px, calc(100vw - 128px)) !important;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 0 12px !important;
+  }
+
+  body.search-open .search input,
+  .search:focus-within input {
+    position: static;
+    width: 100% !important;
+    min-width: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar {
+    position: fixed !important;
+    top: var(--topbar) !important;
+    left: 0 !important;
+    z-index: 60;
+    width: min(326px, 86vw) !important;
+    height: calc(100dvh - var(--topbar)) !important;
+    padding: 18px 14px 24px !important;
+    overflow-y: auto;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 0;
+    background: #ffffff;
+    box-shadow: 28px 0 60px rgba(26, 26, 26, 0.16);
+    transform: translateX(-108%) !important;
+    transition: transform 220ms ease;
+  }
+
+  body.nav-open .sidebar {
+    transform: translateX(0) !important;
+  }
+
+  .sidebar-logo {
+    display: none !important;
+  }
+
+  .side-nav {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  .nav-section-trigger,
+  .nav-standalone {
+    min-height: 52px !important;
+  }
+
+  .content {
+    padding: 24px 18px 60px !important;
+  }
+
+  .toc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    padding-inline: 10px !important;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  body.search-open .brand {
+    display: none;
+  }
+
+  body.search-open .search,
+  .search:focus-within {
+    width: calc(100vw - 76px) !important;
+    max-width: calc(100vw - 76px) !important;
+  }
+
+  .content {
+    padding: 18px 12px 52px !important;
+  }
 }
