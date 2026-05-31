@@ -266,7 +266,6 @@ a {
 .nav-group-title {
   display: none;
 }
-}
 
 .side-nav a,
 .toc a {
@@ -4120,4 +4119,287 @@ body {
     max-height: min(420px, calc(100dvh - var(--topbar) - 24px));
     overflow: auto;
   }
+}
+
+/* Final menu tone. */
+.sidebar {
+  background: #fbfbfb !important;
+}
+
+.nav-section-trigger,
+.nav-section.is-current .nav-section-trigger,
+.nav-section[open] .nav-section-trigger {
+  font-weight: 600 !important;
+}
+
+.side-nav .nav-section-list a,
+.side-nav a,
+.side-nav a.active,
+.side-nav a:hover {
+  font-weight: 400 !important;
+}
+
+.nav-section.is-current .nav-section-trigger,
+.nav-section[open] .nav-section-trigger {
+  background: #edf7ff !important;
+}
+
+.side-nav a.active {
+  background: rgba(0, 136, 255, 0.08) !important;
+  color: var(--blue-active) !important;
+}
+
+/* IDM-PLUS logo placement and compact home banner. */
+.logo-placeholder--filled {
+  min-height: 230px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(24px, 4vw, 42px);
+  background: #ffffff;
+}
+
+.logo-placeholder--filled img {
+  display: block;
+  width: min(100%, 460px);
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.home-page .image-hero > img {
+  max-height: 280px !important;
+  aspect-ratio: 16 / 4.5 !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 720px) {
+  .home-page .image-hero > img {
+    max-height: 210px !important;
+    aspect-ratio: 16 / 7 !important;
+  }
+
+  .logo-placeholder--filled {
+    min-height: 190px;
+    padding: 24px;
+  }
+}
+
+/* Final QA rhythm pass. */
+html {
+  background: #fbfbfb;
+}
+
+body {
+  background: #fbfbfb;
+}
+
+.content {
+  width: 100%;
+  min-width: 0;
+}
+
+.doc-section,
+.dashboard-content > section {
+  margin-inline: auto;
+}
+
+.doc-section {
+  padding-top: clamp(44px, 5vw, 68px) !important;
+  padding-bottom: clamp(40px, 5vw, 64px) !important;
+}
+
+.doc-section + .doc-section,
+.dashboard-content > section + section {
+  margin-top: clamp(20px, 3vw, 34px);
+}
+
+.hero-section h1,
+.doc-section h1 {
+  max-width: 980px;
+  margin-bottom: clamp(18px, 2vw, 26px);
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 960px;
+  margin-bottom: clamp(28px, 4vw, 42px);
+}
+
+.doc-block {
+  margin-top: clamp(34px, 4vw, 52px) !important;
+}
+
+.doc-block > h2 {
+  margin-bottom: clamp(18px, 2.2vw, 28px);
+}
+
+.article-grid,
+.guideline-grid,
+.do-dont-grid,
+.brand-spec,
+.role-card-grid {
+  gap: clamp(16px, 1.6vw, 22px) !important;
+}
+
+.article-card,
+.guideline-card,
+.do-card,
+.dont-card,
+.menu-card,
+.logo-lab,
+.voice-list {
+  border-radius: 18px;
+  padding: clamp(22px, 2.2vw, 30px) !important;
+}
+
+.article-card h3,
+.guideline-card h3,
+.do-card h3,
+.dont-card h3,
+.menu-card h3 {
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.article-card p,
+.guideline-card p,
+.do-card p,
+.dont-card p,
+.logo-lab p,
+.voice-list li {
+  line-height: 1.58;
+}
+
+.spec-table {
+  width: 100%;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: clamp(14px, 1.6vw, 20px) !important;
+  line-height: 1.48;
+}
+
+.sidebar {
+  overflow-x: hidden;
+}
+
+.side-nav {
+  gap: 10px !important;
+}
+
+.nav-section-trigger {
+  min-width: 0;
+}
+
+.nav-section-list a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.toc {
+  padding-top: clamp(24px, 4vw, 42px);
+}
+
+.site-footer {
+  margin-top: clamp(20px, 3vw, 40px) !important;
+}
+
+.home-page .dashboard-content {
+  gap: clamp(18px, 3vw, 32px) !important;
+}
+
+.home-page .image-hero {
+  gap: clamp(18px, 2vw, 26px) !important;
+}
+
+.home-page .image-hero > img {
+  width: 100%;
+  border-radius: 22px;
+}
+
+.home-page .hero-copy {
+  padding-inline: 4px;
+}
+
+@media (max-width: 1100px) {
+  .content,
+  .main-content,
+  .dashboard-content {
+    padding-inline: clamp(16px, 3vw, 28px) !important;
+  }
+
+  .toc {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .doc-section {
+    padding-top: 34px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .hero-section h1,
+  .doc-section h1 {
+    margin-bottom: 16px;
+  }
+
+  .lead {
+    margin-bottom: 26px;
+  }
+
+  .doc-block {
+    margin-top: 34px !important;
+  }
+
+  .article-card,
+  .guideline-card,
+  .do-card,
+  .dont-card,
+  .menu-card,
+  .logo-lab,
+  .voice-list {
+    padding: 20px !important;
+  }
+
+  .spec-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Restore home hero width after final QA pass. */
+.home-page .dashboard-content > section {
+  width: 100%;
+  margin-inline: 0 !important;
+}
+
+.home-page .dashboard-hero {
+  justify-items: stretch;
+}
+
+.home-page .image-hero > img {
+  width: 100% !important;
+  max-width: none !important;
+  justify-self: stretch;
+}
+
+.home-page .hero-copy {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+/* Tighten gap between home intro and section cards. */
+.home-page .dashboard-content > .scene-section {
+  margin-top: clamp(8px, 1.4vw, 18px) !important;
+  padding-top: clamp(12px, 2vw, 24px) !important;
+}
+
+.home-page .dashboard-hero {
+  padding-bottom: clamp(10px, 1.8vw, 22px) !important;
 }

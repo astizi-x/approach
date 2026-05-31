@@ -7,12 +7,9 @@
   const searchShell = document.querySelector(".search");
   const noResults = document.querySelector(".no-results");
   const copyStatus = document.querySelector("#copyStatus");
-  const sizeControl = document.querySelector("#sizeControl");
-  const disabledControl = document.querySelector("#disabledControl");
-  const loadingControl = document.querySelector("#loadingControl");
-  const componentPreview = document.querySelector("#componentPreview");
   const navGroups = Array.from(document.querySelectorAll(".nav-section"));
   const currentPage = location.pathname.split("/").pop() || "index.html";
+
   const siteSearchIndex = [
     {
       title: "Главная",
@@ -210,11 +207,9 @@
     const trigger = group.querySelector(".nav-section-trigger");
     if (!trigger) return;
 
+    trigger.setAttribute("aria-expanded", String(group.open));
     trigger.addEventListener("click", () => {
       setTimeout(() => {
-        navGroups.forEach((otherGroup) => {
-          if (otherGroup !== group) otherGroup.open = false;
-        });
         trigger.setAttribute("aria-expanded", String(group.open));
       }, 0);
     });
@@ -268,28 +263,4 @@
       }
     });
   });
-
-  function updateComponentDemo() {
-    if (!componentPreview || !sizeControl || !disabledControl || !loadingControl) return;
-
-    const buttons = componentPreview.querySelectorAll(".demo-button");
-    componentPreview.classList.remove("size-small", "size-medium", "size-large");
-    componentPreview.classList.add(`size-${sizeControl.value}`);
-
-    buttons.forEach((button) => {
-      if (!button.dataset.label) {
-        button.dataset.label = button.textContent;
-      }
-
-      button.disabled = disabledControl.checked;
-      button.classList.toggle("loading", loadingControl.checked);
-      button.textContent = loadingControl.checked ? "Загрузка" : button.dataset.label;
-    });
-  }
-
-  [sizeControl, disabledControl, loadingControl].forEach((control) => {
-    if (control) control.addEventListener("change", updateComponentDemo);
-  });
-
-  updateComponentDemo();
 })();
