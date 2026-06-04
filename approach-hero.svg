@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 680" fill="none">
+  <rect width="1600" height="680" fill="#F8FAFC"/>
+  <defs>
+    <linearGradient id="panel" x1="177" y1="55" x2="1340" y2="692" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9EEF4"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="965" y1="204" x2="1160" y2="416" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0088FF"/>
+      <stop offset="1" stop-color="#005BC7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#1A1A1A" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <path d="M0 305H1600" stroke="#DDE6F0"/>
+  <path d="M0 560H1600" stroke="#E7EDF4" stroke-dasharray="8 10"/>
+  <path d="M370 0V680" stroke="#E7EDF4"/>
+  <path d="M735 0V680" stroke="#DDE6F0"/>
+  <path d="M1088 0V680" stroke="#E7EDF4"/>
+  <path d="M1400 0V680" stroke="#E7EDF4"/>
+  <path d="M148 552L590 342L836 459L408 680H0V628L148 552Z" fill="url(#panel)" stroke="#D8E1EA"/>
+  <path d="M760 300L1110 122L1600 0V680H1030L760 300Z" fill="url(#panel)" stroke="#D8E1EA" filter="url(#shadow)"/>
+  <path d="M1037 338L1175 278L1312 362L1156 430L1037 338Z" fill="url(#blue)" filter="url(#shadow)"/>
+  <path d="M966 256L1110 122L1600 0V96L1166 206L1037 338L966 256Z" fill="#FFFFFF" stroke="#D8E1EA" filter="url(#shadow)"/>
+  <path d="M1037 338L1156 430V548L1037 457V338Z" fill="#EEF3F8" stroke="#D8E1EA"/>
+  <path d="M1166 206L1600 96V248L1312 362L1175 278L1166 206Z" fill="#FFFFFF" stroke="#D8E1EA"/>
+  <rect x="44" y="54" width="7" height="7" fill="#0088FF"/>
+  <rect x="66" y="54" width="7" height="7" fill="#0088FF"/>
+  <rect x="88" y="54" width="7" height="7" fill="#0088FF"/>
+  <rect x="44" y="76" width="7" height="7" fill="#0088FF"/>
+  <rect x="66" y="76" width="7" height="7" fill="#0088FF"/>
+  <rect x="88" y="76" width="7" height="7" fill="#0088FF"/>
+  <path d="M380 222C380 150 438 92 510 92H792" stroke="#DDE6F0"/>
+  <path d="M380 222V392H580" stroke="#DDE6F0"/>
+  <rect x="792" y="89" width="8" height="8" fill="#0088FF"/>
+  <rect x="580" y="388" width="8" height="8" fill="#0088FF"/>
+  <path d="M1252 470H1342V560" stroke="#0088FF" stroke-width="2"/>
+  <rect x="1250" y="598" width="5" height="5" fill="#0088FF"/>
+  <rect x="1270" y="598" width="5" height="5" fill="#0088FF"/>
+  <rect x="1290" y="598" width="5" height="5" fill="#0088FF"/>
+</svg>
