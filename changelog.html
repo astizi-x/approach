@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Обновления - approach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="approach">
+        <img src="assets/approach-logo.svg" alt="approach" />
+      </a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <div class="nav-group">
+          <a class="nav-trigger" href="visual-language.html">Дизайнеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для дизайнера">
+            <a href="visual-language.html">Визуальный язык</a>
+            <a href="typography.html">Типографика</a>
+            <a href="colors.html">Палитра</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="brand.html">Менеджеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для менеджера">
+            <a href="brand.html">Бренд</a>
+            <a href="logos.html">Скачать логотипы</a>
+            <a href="download-icons.html">Скачать иконки</a>
+          </div>
+        </div>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Открыть поиск"></button>
+    </header>
+    <main class="page content-page">
+      <section class="page-hero">
+        <p class="section-kicker">Updates</p>
+        <h1>Обновления</h1>
+        <p class="lead">История изменений approach и новые материалы дизайн-системы ИДМ-ПЛЮС.</p>
+      </section>
+      <section class="principles">
+        <article class="principle-card"><span class="num">01</span><h3>Новая оболочка</h3><p>Сайт переведен в единый чистый стиль.</p></article>
+        <article class="principle-card"><span class="num">02</span><h3>Навигация</h3><p>Разделы для дизайнера и менеджера вынесены в верхнее меню.</p></article>
+        <article class="principle-card"><span class="num">03</span><h3>Материалы</h3><p>Подготовлена база для следующих страниц.</p></article>
+        <article class="principle-card"><span class="num">04</span><h3>Поиск</h3><p>Работает локальный поиск по разделам.</p></article>
+      </section>
+      <footer class="site-footer">
+        <div>
+          <a class="footer-logo" href="index.html" aria-label="approach">
+            <img src="assets/approach-logo.svg" alt="approach" />
+          </a>
+          <p class="footer-text">Дизайн-система для продуктов<br />и коммуникаций ИДМ-ПЛЮС</p>
+        </div>
+        <p class="footer-credit">Дизайн: Влад Кожевников</p>
+      </footer>
+    </main>
+    <div class="search-panel" aria-hidden="true"><button class="search-close" type="button" aria-label="Закрыть поиск">×</button><div class="search-box"><input id="globalSearch" type="search" placeholder="Поиск по системе" autocomplete="off" /></div></div>
+    <script src="app.js"></script>
+  </body>
+</html>

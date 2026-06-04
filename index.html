@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="approach - дизайн-система ИДМ-ПЛЮС." />
+    <title>approach - дизайн-система ИДМ-ПЛЮС</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="approach">
+        <img src="assets/approach-logo.svg" alt="approach" />
+      </a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <div class="nav-group">
+          <a class="nav-trigger" href="visual-language.html">Дизайнеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для дизайнера">
+            <a href="visual-language.html">Визуальный язык</a>
+            <a href="typography.html">Типографика</a>
+            <a href="colors.html">Палитра</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="brand.html">Менеджеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для менеджера">
+            <a href="brand.html">Бренд</a>
+            <a href="logos.html">Скачать логотипы</a>
+            <a href="download-icons.html">Скачать иконки</a>
+          </div>
+        </div>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Открыть поиск"></button>
+    </header>
+
+    <main class="page">
+      <section class="home-hero">
+        <div class="hero-copy">
+          <p class="kicker">Design system IDM-PLUS</p>
+          <h1><span>Единый визуальный язык</span><span>для продуктов и коммуникаций</span><span>ИДМ-ПЛЮС</span></h1>
+          <p class="lead">Approach - это дизайн-система, которая объединяет продукты и коммуникации ИДМ-ПЛЮС. Она помогает создавать понятные, технологичные и согласованные интерфейсы и материалы.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero-banner.png" alt="" />
+        </div>
+      </section>
+
+      <section class="home-cards" aria-label="Разделы дизайн-системы">
+        <article class="role-card" id="designer">
+          <div class="role-card-head">
+            <span class="line-icon"><img src="assets/icon-layout.svg" alt="" /></span>
+            <h2>Дизайнеру</h2>
+          </div>
+          <p>Инструменты и принципы для создания интерфейсов и визуальных материалов.</p>
+          <div class="role-list">
+            <a class="role-link" href="visual-language.html">
+              <span class="mini-icon"><img src="assets/icon-grid.svg" alt="" /></span>
+              <span><strong>Визуальный язык</strong><span>Компоненты, паттерны, сетки и композиция</span></span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="role-link" href="typography.html">
+              <span class="mini-icon"><img src="assets/icon-aa.svg" alt="" /></span>
+              <span><strong>Типографика</strong><span>Шрифты, стили текста, правила набора</span></span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="role-link" href="colors.html">
+              <span class="mini-icon"><img src="assets/icon-palette.svg" alt="" /></span>
+              <span><strong>Палитра</strong><span>Цвета, семантика и доступность</span></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="role-card" id="manager">
+          <div class="role-card-head">
+            <span class="line-icon"><img src="assets/icon-briefcase.svg" alt="" /></span>
+            <h2>Менеджеру</h2>
+          </div>
+          <p>Материалы бренда и ресурсы для работы с коммуникациями и партнерами.</p>
+          <div class="role-list">
+            <a class="role-link" href="brand.html">
+              <span class="mini-icon"><img src="assets/icon-brand.svg" alt="" /></span>
+              <span><strong>Бренд</strong><span>Компоненты, паттерны, сетки и композиция</span></span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="role-link" href="logos.html">
+              <span class="mini-icon"><img src="assets/icon-download.svg" alt="" /></span>
+              <span><strong>Скачать логотипы</strong><span>Логотипы ИДМ-ПЛЮС и продуктов</span></span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="role-link" href="download-icons.html">
+              <span class="mini-icon"><img src="assets/icon-iconset.svg" alt="" /></span>
+              <span><strong>Скачать иконки</strong><span>Набор иконок в разных форматах</span></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a class="footer-logo" href="index.html" aria-label="approach">
+            <img src="assets/approach-logo.svg" alt="approach" />
+          </a>
+          <p class="footer-text">Дизайн-система для продуктов<br />и коммуникаций ИДМ-ПЛЮС</p>
+        </div>
+        <p class="footer-credit">Дизайн: Влад Кожевников</p>
+      </footer>
+    </main>
+
+    <div class="search-panel" aria-hidden="true">
+      <button class="search-close" type="button" aria-label="Закрыть поиск">×</button>
+      <div class="search-box">
+        <input id="globalSearch" type="search" placeholder="Поиск по системе" autocomplete="off" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
