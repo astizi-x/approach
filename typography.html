@@ -1,22 +1,219 @@
 <!doctype html>
 <html lang="ru">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Типографика - approach</title><link rel="stylesheet" href="styles.css" /></head>
-  <body><div class="app-shell"><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">a</span><span><strong>approach</strong><small>ИДМ-ПЛЮС</small></span></a><div class="topbar-actions"><label class="search" for="globalSearch"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Поиск по странице" autocomplete="off" /></label><button class="icon-button nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button></div></header><aside class="sidebar"><a class="sidebar-logo" href="index.html" aria-label="На главную"><span class="sidebar-logo-mark" aria-hidden="true">a</span><span>approach</span></a><nav class="side-nav">
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Дизайнеру</summary>
-    <div class="nav-section-list">
-      <a href="visual-language.html">Визуальный язык</a>
-      <a href="typography.html">Типографика</a>
-      <a href="colors.html">Палитра</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Типографика approach для ИДМ-ПЛЮС." />
+    <title>Типографика - approach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="approach">
+        <img src="assets/approach-logo.svg" alt="approach" />
+      </a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <div class="nav-group">
+          <a class="nav-trigger" href="visual-language.html">Дизайнеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для дизайнера">
+            <a href="visual-language.html">Визуальный язык</a>
+            <a href="typography.html">Типографика</a>
+            <a href="colors.html">Палитра</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="brand.html">Менеджеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для менеджера">
+            <a href="brand.html">Бренд</a>
+            <a href="logos.html">Скачать логотипы</a>
+            <a href="download-icons.html">Скачать иконки</a>
+          </div>
+        </div>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Открыть поиск"></button>
+    </header>
+
+    <main class="page content-page">
+      <section class="page-hero">
+        <p class="section-kicker">01 / Visual launguage</p>
+        <h1>Типографика</h1>
+        <p class="lead">Типографика в approach помогает продуктам, интерфейсам и материалам бренда говорить одним голосом: понятно, структурно и уверенно.</p>
+      </section>
+
+      <section class="type-scale" aria-label="Типографическая шкала">
+        <article class="type-row">
+          <div class="type-row-label">
+            <strong>Display</strong>
+            <span>Для акцентных заголовков<br />и hero-блоков</span>
+          </div>
+          <p class="type-sample type-display">Заголовок дисплея</p>
+          <span class="type-row-meta">Montserrat / 700</span>
+        </article>
+        <article class="type-row">
+          <div class="type-row-label">
+            <strong>Heading</strong>
+            <span>Для основных заголовков<br />разделов и страниц</span>
+          </div>
+          <p class="type-sample type-heading">Заголовок уровня 1</p>
+          <span class="type-row-meta">Montserrat / 600</span>
+        </article>
+        <article class="type-row">
+          <div class="type-row-label">
+            <strong>Subheading</strong>
+            <span>Для подзаголовков<br />и второстепенных акцентов</span>
+          </div>
+          <p class="type-sample type-subheading">Подзаголовок уровня 2</p>
+          <span class="type-row-meta">Montserrat / 500</span>
+        </article>
+        <article class="type-row">
+          <div class="type-row-label">
+            <strong>Body</strong>
+            <span>Для основного текста<br />и описаний</span>
+          </div>
+          <p class="type-sample type-body">Основной текст интерфейса и документации.</p>
+          <span class="type-row-meta">Roboto / 400</span>
+        </article>
+        <article class="type-row">
+          <div class="type-row-label">
+            <strong>Caption</strong>
+            <span>Для вспомогательных подписей<br />и технических пометок</span>
+          </div>
+          <p class="type-sample type-caption">Подпись, примечание или техническая метка.</p>
+          <span class="type-row-meta">Roboto / 400 - Condensed</span>
+        </article>
+      </section>
+
+      <section class="typography-grid">
+        <article class="type-panel">
+          <h2>Шрифт</h2>
+          <p>В системе approach используется современный гротескный стек шрифтов для цифровых интерфейсов и документации.</p>
+          <div class="font-list">
+            <div class="font-card">
+              <span class="aa"><img src="assets/icon-aa.svg" alt="" /></span>
+              <div>
+                <strong>Montserrat</strong>
+                <p>Для крупных заголовков и акцентов. Современный, геометрический, уверенный.</p>
+              </div>
+              <span class="badge">Заголовки</span>
+            </div>
+            <div class="font-card">
+              <span class="aa"><img src="assets/icon-aa.svg" alt="" /></span>
+              <div>
+                <strong>Roboto</strong>
+                <p>Для основного текста и интерфейсов. Читаемый, нейтральный, функциональный.</p>
+              </div>
+              <span class="badge">Текст</span>
+            </div>
+            <div class="font-card">
+              <span class="aa"><img src="assets/icon-aa.svg" alt="" /></span>
+              <div>
+                <strong>Roboto Condensed</strong>
+                <p>Для технических меток и подписей. Экономит пространство.</p>
+              </div>
+              <span class="badge">Метки</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="type-panel">
+          <h2>Иерархия</h2>
+          <p>Базовые размеры и области применения типографических стилей.</p>
+          <table class="type-table">
+            <thead>
+              <tr>
+                <th>Стиль</th>
+                <th>Размер</th>
+                <th>Интерлиньяж</th>
+                <th>Применение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>H1</td><td>72-96 px</td><td>110%</td><td>Главные заголовки</td></tr>
+              <tr><td>H2</td><td>36-44 px</td><td>120%</td><td>Заголовки страниц</td></tr>
+              <tr><td>H3</td><td>20-24 px</td><td>130%</td><td>Подзаголовки, акценты</td></tr>
+              <tr><td>Body</td><td>16-18 px</td><td>150%</td><td>Основной текст, описания</td></tr>
+              <tr><td>Caption</td><td>12-14 px</td><td>140%</td><td>Подписи, примечания</td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="type-panel">
+          <h2>Правила набора</h2>
+          <p>Ключевые принципы, которые помогают делать текст понятным и выразительным.</p>
+          <div class="type-rules">
+            <div class="type-rule">
+              <span class="rule-icon"><img src="assets/icon-line-length.svg" alt="" /></span>
+              <div>
+                <strong>Оптимальная длина строки</strong>
+                <p>Рекомендуемая длина - 45-75 знаков для комфортного чтения.</p>
+              </div>
+            </div>
+            <div class="type-rule">
+              <span class="rule-icon"><img src="assets/icon-align-left.svg" alt="" /></span>
+              <div>
+                <strong>Выравнивание по левому краю</strong>
+                <p>Левое выравнивание - стандарт для цифровых интерфейсов.</p>
+              </div>
+            </div>
+            <div class="type-rule">
+              <span class="rule-icon"><img src="assets/icon-concise.svg" alt="" /></span>
+              <div>
+                <strong>Коротко и по делу</strong>
+                <p>Используйте понятные формулировки и избегайте избыточности.</p>
+              </div>
+            </div>
+            <div class="type-rule">
+              <span class="rule-icon"><img src="assets/icon-numbers.svg" alt="" /></span>
+              <div>
+                <strong>Числа - отдельно от текста</strong>
+                <p>Разделяйте числа и единицы измерения неразрывным пробелом.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Можно и нельзя</h2>
+        <div class="do-dont">
+          <article class="do-card">
+            <h3 class="do-title"><span class="status-icon"><img src="assets/icon-done.svg" alt="" /></span>Можно</h3>
+            <ul>
+              <li>Использовать только шрифты из стека системы.</li>
+              <li>Соблюдать иерархию размеров и насыщенности.</li>
+              <li>Сохранять достаточный контраст текста к фону.</li>
+              <li>Использовать текстовые стили вместо механических настроек.</li>
+            </ul>
+          </article>
+          <article class="dont-card">
+            <h3 class="dont-title"><span class="status-icon"><img src="assets/icon-note.svg" alt="" /></span>Нельзя</h3>
+            <ul>
+              <li>Смешивать разные шрифты вне системы.</li>
+              <li>Использовать более четырех уровней иерархии на странице.</li>
+              <li>Писать прописными буквами наборный текст.</li>
+              <li>Делать акценты только стилем без смысловой необходимости.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a class="footer-logo" href="index.html" aria-label="approach">
+            <img src="assets/approach-logo.svg" alt="approach" />
+          </a>
+          <p class="footer-text">Дизайн-система для продуктов<br />и коммуникаций ИДМ-ПЛЮС</p>
+        </div>
+        <p class="footer-credit">Дизайн: Влад Кожевников</p>
+      </footer>
+    </main>
+
+    <div class="search-panel" aria-hidden="true">
+      <button class="search-close" type="button" aria-label="Закрыть поиск">×</button>
+      <div class="search-box">
+        <input id="globalSearch" type="search" placeholder="Поиск по системе" autocomplete="off" />
+      </div>
     </div>
-  </details>
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Менеджеру</summary>
-    <div class="nav-section-list">
-      <a href="brand.html">Бренд</a>
-      <a href="logos.html">Скачать логотипы</a>
-      <a href="download-icons.html">Скачать иконки</a>
-    </div>
-  </details>
-</nav></aside><main class="content"><section class="doc-section hero-section" id="typography" data-title="Типографика"><div class="section-kicker">02 / Typography</div><h1>Типографика</h1><p class="lead">Типографика ИДМ-ПЛЮС в approach помогает продуктам, интерфейсам и бренд-материалам говорить одним голосом: пользователь должен без усилия отличать раздел, правило, параметр, ссылку и пояснение.</p><div class="type-scale"><div><span>Display</span><strong>Точные технологии требуют ясной подачи</strong><code>56 / 1.05 / 800</code></div><div><span>Heading</span><strong>Раздел документации</strong><code>36 / 1.15 / 750</code></div><div><span>Subheading</span><strong>Название правила или компонента</strong><code>22 / 1.3 / 700</code></div><div><span>Body</span><p>Основной текст объясняет назначение, ограничение или сценарий применения простыми формулировками.</p><code>16 / 1.6 / 400</code></div></div><div class="doc-block" id="font"><h2>Шрифт</h2><div class="guideline-grid"><article class="guideline-card"><span>Stack</span><h3>Системный sans-serif</h3><p>Используем Montserrat, Roboto и Roboto Condensed. Montserrat отвечает за крупные заголовки, Roboto — за основной текст, Roboto Condensed — за технические метки и компактные подписи.</p></article><article class="guideline-card"><span>Case</span><h3>Обычный регистр</h3><p>Не пишем длинные фразы капсом. Верхний регистр допустим только для коротких меток, индексов и технических обозначений.</p></article></div></div><div class="doc-block" id="hierarchy"><h2>Иерархия</h2><table class="spec-table"><thead><tr><th>Уровень</th><th>Размер</th><th>Где использовать</th></tr></thead><tbody><tr><td>H1</td><td>72-96 px</td><td>Главные страницы разделов и крупные лендинговые блоки.</td></tr><tr><td>H2</td><td>36-44 px</td><td>Основные блоки внутри документации.</td></tr><tr><td>H3</td><td>20-24 px</td><td>Карточки, правила, элементы таблиц, короткие инструкции.</td></tr><tr><td>Body</td><td>16-18 px</td><td>Пояснения, описания процессов, текст для менеджеров и подрядчиков.</td></tr><tr><td>Caption</td><td>12-14 px</td><td>Метки, даты, подписи, технические уточнения.</td></tr></tbody></table></div><div class="doc-block" id="rules"><h2>Правила набора</h2><div class="article-grid"><article class="article-card"><span>Длина</span><h3>Строка не должна быть слишком длинной</h3><p>Для обычного текста держим комфортную ширину: примерно 60-80 знаков. Таблицы и спецификации можно делать шире.</p></article><article class="article-card"><span>Выравнивание</span><h3>Левый край</h3><p>Основной текст, списки и таблицы выравниваются по левому краю. Центровка используется только в компактных промо-блоках.</p></article><article class="article-card"><span>Тон</span><h3>Коротко и предметно</h3><p>Пишем так, чтобы дизайнер, менеджер или подрядчик сразу понял действие: скачать, проверить, выбрать, передать, согласовать.</p></article><article class="article-card"><span>Числа</span><h3>Параметры отдельно от текста</h3><p>Размеры, версии, коды и значения лучше выносить в таблицы, бейджи или отдельные строки, чтобы их было легко сверять.</p></article></div></div><div class="doc-block" id="do-dont"><h2>Можно и нельзя</h2><div class="do-dont-grid"><article class="do-card"><span>Можно</span><h3>Разделять смысл уровнем текста</h3><p>Использовать Montserrat для заголовков, Roboto для основного текста и Roboto Condensed для коротких технических меток.</p></article><article class="dont-card"><span>Нельзя</span><h3>Смешивать шрифты без роли</h3><p>Не применять разные гарнитуры ради украшения, не писать длинные фразы капсом и не делать подписи важнее основного содержания.</p></article></div></div></section><footer class="site-footer">Vlad Kozhevnikov Design</footer></main><aside class="toc"><strong>На странице</strong><a href="#typography">Типографика</a><a href="#font">Шрифт</a><a href="#hierarchy">Иерархия</a><a href="#rules">Правила набора</a><a href="#do-dont">Можно и нельзя</a></aside></div><div class="no-results" hidden><strong>Ничего не найдено</strong><span>Попробуйте другой запрос.</span></div><script src="app.js"></script></body>
+    <script src="app.js"></script>
+  </body>
 </html>

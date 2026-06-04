@@ -1,22 +1,160 @@
 <!doctype html>
 <html lang="ru">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Палитра - approach</title><link rel="stylesheet" href="styles.css" /></head>
-  <body><div class="app-shell"><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">a</span><span><strong>approach</strong><small>ИДМ-ПЛЮС</small></span></a><div class="topbar-actions"><label class="search" for="globalSearch"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Поиск по странице" autocomplete="off" /></label><button class="icon-button nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button></div></header><aside class="sidebar"><a class="sidebar-logo" href="index.html" aria-label="На главную"><span class="sidebar-logo-mark" aria-hidden="true">a</span><span>approach</span></a><nav class="side-nav">
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Дизайнеру</summary>
-    <div class="nav-section-list">
-      <a href="visual-language.html">Визуальный язык</a>
-      <a href="typography.html">Типографика</a>
-      <a href="colors.html">Палитра</a>
-    </div>
-  </details>
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Менеджеру</summary>
-    <div class="nav-section-list">
-      <a href="brand.html">Бренд</a>
-      <a href="logos.html">Скачать логотипы</a>
-      <a href="download-icons.html">Скачать иконки</a>
-    </div>
-  </details>
-</nav></aside><main class="content"><section class="doc-section hero-section" id="colors" data-title="Палитра"><div class="section-kicker">03 / Palette</div><h1>Палитра</h1><p class="lead">Палитра ИДМ-ПЛЮС в approach поддерживает целостность пользовательского опыта во всех продуктах компании. Основу составляют три фирменных цвета: голубой #00BFF3, серый #9BA2A7 и белый #FFFFFF.</p><div class="color-grid"><button class="swatch" data-copy="#00BFF3" style="--swatch:#00BFF3"><span></span><strong>IDM-PLUS Cyan</strong><small>#00BFF3</small></button><button class="swatch" data-copy="#9BA2A7" style="--swatch:#9BA2A7"><span></span><strong>IDM-PLUS Gray</strong><small>#9BA2A7</small></button><button class="swatch" data-copy="#FFFFFF" style="--swatch:#ffffff"><span></span><strong>IDM-PLUS White</strong><small>#FFFFFF</small></button></div><p class="note" id="copyStatus" role="status">Нажмите на цвет, чтобы скопировать значение.</p><div class="doc-block" id="roles"><h2>Роли цветов</h2><table class="spec-table"><thead><tr><th>Роль</th><th>Цвет</th><th>Использование</th></tr></thead><tbody><tr><td>Primary / Cyan</td><td>#00BFF3</td><td>Главный фирменный цвет ИДМ-ПЛЮС: действия, ссылки, активные состояния, акценты в презентациях и интерфейсах.</td></tr><tr><td>Neutral / Gray</td><td>#9BA2A7</td><td>Вторичный фирменный цвет: подписи, вспомогательный текст, технические метки, спокойные разделители и фоновые детали.</td></tr><tr><td>Surface / White</td><td>#FFFFFF</td><td>Основная поверхность продуктов, документации и бренд-материалов. Белый фон сохраняет ощущение точности и чистоты.</td></tr></tbody></table></div><div class="doc-block" id="rules"><h2>Правила применения</h2><div class="guideline-grid"><article class="guideline-card"><span>01</span><h3>Не заливать все голубым</h3><p>Голубой должен вести пользователя к действию. Для больших поверхностей используем белый и мягкий холодный фон.</p></article><article class="guideline-card"><span>02</span><h3>Контраст важнее декоративности</h3><p>Текст должен читаться на любом устройстве. Не используем светло-синий текст на белом фоне для важных сообщений.</p></article><article class="guideline-card"><span>03</span><h3>Статусы не конкурируют с брендом</h3><p>Служебные цвета для ошибок, успеха и предупреждений допускаются только в интерфейсных состояниях и не входят в фирменную палитру ИДМ-ПЛЮС.</p></article><article class="guideline-card"><span>04</span><h3>Один экран - один главный акцент</h3><p>Если на экране несколько CTA, главным остается один. Остальные действия делаем вторичными.</p></article></div></div><div class="doc-block" id="do-dont"><h2>Можно и нельзя</h2><div class="do-dont-grid"><article class="do-card"><span>Можно</span><h3>Использовать фирменные цвета по назначению</h3><p>#00BFF3 — для акцентов и действий, #9BA2A7 — для вторичной информации, #FFFFFF — для чистой основной поверхности.</p></article><article class="dont-card"><span>Нельзя</span><h3>Подменять палитру служебными цветами</h3><p>Не использовать цвета ошибок, успеха и предупреждений как фирменные. Они допустимы только для интерфейсных состояний.</p></article></div></div></section><footer class="site-footer">Vlad Kozhevnikov Design</footer></main><aside class="toc"><strong>На странице</strong><a href="#colors">Палитра</a><a href="#roles">Роли цветов</a><a href="#rules">Правила применения</a><a href="#do-dont">Можно и нельзя</a></aside></div><div class="no-results" hidden><strong>Ничего не найдено</strong><span>Попробуйте другой запрос.</span></div><script src="app.js"></script></body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Палитра - approach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="approach">
+        <img src="assets/approach-logo.svg" alt="approach" />
+      </a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <div class="nav-group">
+          <a class="nav-trigger" href="visual-language.html">Дизайнеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для дизайнера">
+            <a href="visual-language.html">Визуальный язык</a>
+            <a href="typography.html">Типографика</a>
+            <a href="colors.html">Палитра</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="brand.html">Менеджеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для менеджера">
+            <a href="brand.html">Бренд</a>
+            <a href="logos.html">Скачать логотипы</a>
+            <a href="download-icons.html">Скачать иконки</a>
+          </div>
+        </div>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Открыть поиск"></button>
+    </header>
+
+    <main class="page content-page palette-page">
+      <section class="split-hero">
+        <div class="page-hero">
+          <p class="kicker">Design system IDM-PLUS <span>/</span> 03 / Palette</p>
+          <h1>Палитра</h1>
+          <p class="lead">Палитра IDM-PLUS обеспечивает узнаваемый и последовательный опыт во всех продуктах и материалах бренда.</p>
+        </div>
+        <div class="palette-preview">
+          <button class="color-tile" data-copy="#00BFF3" type="button">
+            <span class="color-fill cyan"></span>
+            <strong>IDM-PLUS Cyan</strong>
+            <span>#00BFF3</span>
+          </button>
+          <button class="color-tile" data-copy="#9BA2A7" type="button">
+            <span class="color-fill gray"></span>
+            <strong>IDM-PLUS Gray</strong>
+            <span>#9BA2A7</span>
+          </button>
+          <button class="color-tile" data-copy="#FFFFFF" type="button">
+            <span class="color-fill white"></span>
+            <strong>IDM-PLUS White</strong>
+            <span>#FFFFFF</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="section-title">Роли цветов</h2>
+        <p class="section-lead">Каждый цвет в системе выполняет свою функцию. Используйте их согласно роли, чтобы сохранять ясность и иерархию интерфейсов.</p>
+        <div class="color-table">
+          <div class="color-row color-head">
+            <span>Роль</span>
+            <span>Цвет</span>
+            <span>HEX</span>
+            <span>Назначение</span>
+            <span>Примеры применения</span>
+          </div>
+          <div class="color-row">
+            <div><strong>Primary / Cyan</strong><span>Основной акцент</span></div>
+            <span class="color-dot cyan"></span>
+            <span>#00BFF3</span>
+            <p>Основной бренд-акцент. Активные элементы, ссылки, ключевые действия.</p>
+            <ul><li>Кнопки и ссылки</li><li>Активные состояния</li><li>Выделения и акценты</li></ul>
+          </div>
+          <div class="color-row">
+            <div><strong>Neutral / Gray</strong><span>Нейтральный фон и границы</span></div>
+            <span class="color-dot gray"></span>
+            <span>#9BA2A7</span>
+            <p>Вспомогательный цвет для границ, иконок, вторичного текста и разделителей.</p>
+            <ul><li>Границы и разделители</li><li>Иконки и UI-элементы</li><li>Вторичный текст</li></ul>
+          </div>
+          <div class="color-row">
+            <div><strong>Surface / White</strong><span>Поверхности и фон</span></div>
+            <span class="color-dot white"></span>
+            <span>#FFFFFF</span>
+            <p>Базовый фон интерфейса. Обеспечивает чистоту и контраст.</p>
+            <ul><li>Фоны страниц и секций</li><li>Карточки и модальные окна</li><li>Чистое пространство</li></ul>
+          </div>
+          <div class="color-row">
+            <div><strong>Graphite / Text</strong><span>Текст и иконки</span></div>
+            <span class="color-dot graphite"></span>
+            <span>#111418</span>
+            <p>Основной цвет текста для максимальной читаемости.</p>
+            <ul><li>Заголовки и текст</li><li>Иконки и символы</li><li>Высококонтрастные элементы</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="section-title">Правила применения</h2>
+        <div class="principle-line">
+          <article><span>01</span><h3>Не заливайте всё голубым</h3><p>Используйте Cyan только для ключевых акцентов и действий.</p></article>
+          <article><span>02</span><h3>Контраст важнее декора</h3><p>Текст и элементы интерфейса должны читаться на любом фоне.</p></article>
+          <article><span>03</span><h3>Статусы не заменяют бренд-цвета</h3><p>Семантические цвета используются для состояния, а не для бренда.</p></article>
+          <article><span>04</span><h3>Один экран - один главный акцент</h3><p>Выделяйте только один ключевой элемент с помощью Cyan.</p></article>
+        </div>
+      </section>
+
+      <section class="doc-two-col palette-bottom">
+        <div class="do-dont compact">
+          <article class="do-card">
+            <h3 class="do-title"><span class="status-icon"><img src="assets/icon-done.svg" alt="" /></span>Можно</h3>
+            <ul>
+              <li>Использовать Cyan только для ключевых действий.</li>
+              <li>Сохранять белое пространство вокруг акцентов.</li>
+              <li>Проверять контраст текста и интерфейсных элементов.</li>
+              <li>Применять серый для границ, меток и вторичного текста.</li>
+            </ul>
+          </article>
+          <article class="dont-card">
+            <h3 class="dont-title"><span class="status-icon"><img src="assets/icon-note.svg" alt="" /></span>Нельзя</h3>
+            <ul>
+              <li>Заливать весь экран фирменным голубым.</li>
+              <li>Использовать акцентный цвет без смысловой роли.</li>
+              <li>Смешивать брендовые и статусные цвета.</li>
+              <li>Снижать читаемость ради декоративного эффекта.</li>
+            </ul>
+          </article>
+        </div>
+        <article class="demo-panel">
+          <h2>Семантические цвета</h2>
+          <p>Используются для передачи состояния. Не заменяют бренд-цвета.</p>
+          <div class="status-grid">
+            <span><b class="success">✓</b><strong>Success</strong><em>#22C55E</em></span>
+            <span><b class="info">i</b><strong>Info</strong><em>#3B82F6</em></span>
+            <span><b class="warning">!</b><strong>Warning</strong><em>#F59E0B</em></span>
+            <span><b class="error">×</b><strong>Error</strong><em>#EF4444</em></span>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a class="footer-logo" href="index.html" aria-label="approach">
+            <img src="assets/approach-logo.svg" alt="approach" />
+          </a>
+          <p class="footer-text">Дизайн-система для продуктов<br />и коммуникаций ИДМ-ПЛЮС</p>
+        </div>
+        <p class="footer-credit">Дизайн: Влад Кожевников</p>
+      </footer>
+    </main>
+
+    <div class="search-panel" aria-hidden="true"><button class="search-close" type="button" aria-label="Закрыть поиск">×</button><div class="search-box"><input id="globalSearch" type="search" placeholder="Поиск по системе" autocomplete="off" /></div></div>
+    <script src="app.js"></script>
+  </body>
 </html>

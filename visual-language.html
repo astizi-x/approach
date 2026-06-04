@@ -1,28 +1,198 @@
 <!doctype html>
 <html lang="ru">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Визуальный язык - approach</title><link rel="stylesheet" href="styles.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Визуальный язык approach для ИДМ-ПЛЮС." />
+    <title>Визуальный язык - approach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
-    <div class="app-shell">
-      <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">a</span><span><strong>approach</strong><small>ИДМ-ПЛЮС</small></span></a><div class="topbar-actions"><label class="search" for="globalSearch"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Поиск по странице" autocomplete="off" /></label><button class="icon-button nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
-      <aside class="sidebar"><a class="sidebar-logo" href="index.html" aria-label="На главную"><span class="sidebar-logo-mark" aria-hidden="true">a</span><span>approach</span></a><nav class="side-nav">
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Дизайнеру</summary>
-    <div class="nav-section-list">
-      <a href="visual-language.html">Визуальный язык</a>
-      <a href="typography.html">Типографика</a>
-      <a href="colors.html">Палитра</a>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="approach">
+        <img src="assets/approach-logo.svg" alt="approach" />
+      </a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <div class="nav-group">
+          <a class="nav-trigger" href="visual-language.html">Дизайнеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для дизайнера">
+            <a href="visual-language.html">Визуальный язык</a>
+            <a href="typography.html">Типографика</a>
+            <a href="colors.html">Палитра</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a class="nav-trigger" href="brand.html">Менеджеру</a>
+          <div class="nav-dropdown" aria-label="Разделы для менеджера">
+            <a href="brand.html">Бренд</a>
+            <a href="logos.html">Скачать логотипы</a>
+            <a href="download-icons.html">Скачать иконки</a>
+          </div>
+        </div>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Открыть поиск"></button>
+    </header>
+
+    <main class="page content-page">
+      <section class="page-hero">
+        <p class="section-kicker">01 / Visual language</p>
+        <h1>Визуальный язык</h1>
+        <p class="lead">Визуальный язык ИДМ-ПЛЮС в approach - это система выразительных средств, которая формирует спокойный, точный и технологичный интерфейс без декоративного шума.</p>
+      </section>
+
+      <section class="info-pair" aria-label="Ключевые свойства">
+        <article class="info-card">
+          <span class="line-icon"><img src="assets/icon-pattern.svg" alt="" /></span>
+          <div>
+            <h3>Поверхность - чистое рабочее поле</h3>
+            <p>Белый фон, много воздуха, четкая сетка и аккуратные разделители создают фокус на контенте.</p>
+          </div>
+        </article>
+        <article class="info-card">
+          <span class="line-icon"><img src="assets/icon-pattern.svg" alt="" /></span>
+          <div>
+            <h3>Поверхность - чистое рабочее поле</h3>
+            <p>Белый фон, много воздуха, четкая сетка и аккуратные разделители создают фокус на контенте.</p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h2 class="section-title">Принципы визуального языка</h2>
+        <div class="principles">
+          <article class="principle-card">
+            <span class="num">01</span>
+            <h3>Поверхность - чистое рабочее поле</h3>
+            <p>Каждый элемент имеет функцию и объясняет содержание. Ничего лишнего.</p>
+          </article>
+          <article class="principle-card">
+            <span class="num">02</span>
+            <h3>Польза видна сразу</h3>
+            <p>Иерархия, контраст и простота помогают пользователю быстро считывать и понимать.</p>
+          </article>
+          <article class="principle-card">
+            <span class="num">03</span>
+            <h3>Акцент дозированный</h3>
+            <p>Используем цвет и форму только там, где нужно привлечь внимание или подтвердить действие.</p>
+          </article>
+          <article class="principle-card">
+            <span class="num">04</span>
+            <h3>Технологичность без холода</h3>
+            <p>Геометрия, сетки и типографика создают ощущение инженерной надежности и ясности.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Композиция</h2>
+        <div class="composition">
+          <article class="composition-item">
+            <span class="mini-icon"><img src="assets/icon-grid.svg" alt="" /></span>
+            <div>
+              <h3>Модульность</h3>
+              <p>Контент строится на модульной сетке: четкие отступы, выравнивание и единые размеры.</p>
+            </div>
+          </article>
+          <article class="composition-item">
+            <span class="mini-icon"><img src="assets/icon-rhythm.svg" alt="" /></span>
+            <div>
+              <h3>Ритм</h3>
+              <p>Повторяющиеся интервалы и элементы создают визуальный ритм и порядок.</p>
+            </div>
+          </article>
+          <article class="composition-item">
+            <span class="mini-icon"><img src="assets/icon-forms.svg" alt="" /></span>
+            <div>
+              <h3>Форма</h3>
+              <p>Простые геометрические формы и тонкие линии делают интерфейс понятным и лаконичным.</p>
+            </div>
+          </article>
+          <article class="composition-item">
+            <span class="mini-icon"><img src="assets/icon-image.svg" alt="" /></span>
+            <div>
+              <h3>Изображения</h3>
+              <p>Иллюстрации и диаграммы поддерживают смысл и помогают разобраться в сложном.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Как применять</h2>
+        <table class="rule-table">
+          <thead>
+            <tr>
+              <th>Ситуация</th>
+              <th>Решение</th>
+              <th>Не делать</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Пользователь выбирает действие</td>
+              <td>Выделяем основной CTA голубым цветом и понятной формой</td>
+              <td>Не использовать несколько конкурирующих акцентов</td>
+            </tr>
+            <tr>
+              <td>Нужно показать структуру</td>
+              <td>Используем сетку, отступы и разделители</td>
+              <td>Не перегружать декоративными элементами</td>
+            </tr>
+            <tr>
+              <td>Есть сложные данные</td>
+              <td>Применяем диаграммы, таблицы и иконки для упрощения</td>
+              <td>Не давать сырые данные без контекста</td>
+            </tr>
+            <tr>
+              <td>Нужно подтвердить статус</td>
+              <td>Используем лаконичные индикаторы и текстовые метки</td>
+              <td>Не использовать тяжелые модальные окна без причины</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2 class="section-title">Можно и нельзя</h2>
+        <div class="do-dont">
+          <article class="do-card">
+            <h3 class="do-title"><span class="status-icon"><img src="assets/icon-done.svg" alt="" /></span>Можно</h3>
+            <ul>
+              <li>Использовать белое пространство и аккуратные отступы.</li>
+              <li>Применять голубой для интерактивных элементов.</li>
+              <li>Строить интерфейс на логике и данных.</li>
+              <li>Использовать инженерные иллюстрации и пиктограммы.</li>
+            </ul>
+          </article>
+          <article class="dont-card">
+            <h3 class="dont-title"><span class="status-icon"><img src="assets/icon-note.svg" alt="" /></span>Нельзя</h3>
+            <ul>
+              <li>Украшать интерфейс ради украшения.</li>
+              <li>Дублировать акценты и перегружать цветом.</li>
+              <li>Прятать важные действия и информацию.</li>
+              <li>Использовать тяжелые текстуры и градиенты.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a class="footer-logo" href="index.html" aria-label="approach">
+            <img src="assets/approach-logo.svg" alt="approach" />
+          </a>
+          <p class="footer-text">Дизайн-система для продуктов<br />и коммуникаций ИДМ-ПЛЮС</p>
+        </div>
+        <p class="footer-credit">Дизайн: Влад Кожевников</p>
+      </footer>
+    </main>
+
+    <div class="search-panel" aria-hidden="true">
+      <button class="search-close" type="button" aria-label="Закрыть поиск">×</button>
+      <div class="search-box">
+        <input id="globalSearch" type="search" placeholder="Поиск по системе" autocomplete="off" />
+      </div>
     </div>
-  </details>
-  <details class="nav-section">
-    <summary class="nav-section-trigger">Менеджеру</summary>
-    <div class="nav-section-list">
-      <a href="brand.html">Бренд</a>
-      <a href="logos.html">Скачать логотипы</a>
-      <a href="download-icons.html">Скачать иконки</a>
-    </div>
-  </details>
-</nav></aside>
-      <main class="content"><section class="doc-section hero-section" id="visual-language" data-title="Визуальный язык"><div class="section-kicker">01 / Visual language</div><h1>Визуальный язык</h1><p class="lead">Визуальный язык ИДМ-ПЛЮС в approach задает, как продукты и коммуникации компании выглядят для пользователей: спокойно, точно, без декоративного шума, с понятной иерархией, фирменным голубым акцентом и ощущением инженерной надежности.</p><div class="visual-sample"><div><span class="section-kicker">Поверхность</span><strong>Чистое рабочее поле</strong><p>Белый фон, легкие линии и крупные интервалы помогают сосредоточиться на данных, спецификациях, действиях и материалах.</p></div><div><span class="section-kicker">Сигнал</span><strong>Голубой как точка действия</strong><p>#00BFF3 используется для переходов, выбора, состояния фокуса и ключевых элементов, а не как сплошная заливка всего интерфейса.</p></div></div><div class="doc-block" id="principles"><h2>Принципы визуального языка</h2><div class="guideline-grid"><article class="guideline-card"><span>01</span><h3>Точность важнее эффекта</h3><p>Композиция должна напоминать инженерную схему: ровные отступы, ясные блоки, предсказуемые состояния и минимум случайных деталей.</p></article><article class="guideline-card"><span>02</span><h3>Польза видна сразу</h3><p>Заголовки, карточки и таблицы показывают, что можно сделать: выбрать материал, скачать актив, сверить правило, передать задачу подрядчику.</p></article><article class="guideline-card"><span>03</span><h3>Акцент дозированный</h3><p>Голубой цвет выделяет действие или текущий раздел. Если все элементы голубые, пользователь перестает понимать, что главное.</p></article><article class="guideline-card"><span>04</span><h3>Технологичность без холода</h3><p>Интерфейс остается строгим, но не сухим: светлый фон, мягкие тени и аккуратные скругления делают документацию удобной для ежедневной работы.</p></article></div></div><div class="doc-block" id="composition"><h2>Композиция</h2><div class="article-grid"><article class="article-card"><span>Сетка</span><h3>Модульность</h3><p>Разделы собираются из повторяемых блоков: вводный экран, карточки правил, таблицы, примеры применения и ссылки на материалы.</p></article><article class="article-card"><span>Ритм</span><h3>Воздух между смыслами</h3><p>Большие отступы отделяют смысловые зоны, а внутри карточек интервалы компактнее, чтобы текст читался как рабочая инструкция.</p></article><article class="article-card"><span>Форма</span><h3>Прямые формы</h3><p>Используем прямоугольные поверхности с небольшим радиусом. Сложные декоративные формы не применяются в документации.</p></article><article class="article-card"><span>Изображения</span><h3>Технический контекст</h3><p>Иллюстрации должны поддерживать тему: компоненты, платы, измерения, схемы, оборудование, логистика и промышленная среда.</p></article></div></div><div class="doc-block" id="usage"><h2>Как применять</h2><table class="spec-table"><thead><tr><th>Ситуация</th><th>Решение</th><th>Не делать</th></tr></thead><tbody><tr><td>Документация</td><td>Белый фон, крупный заголовок, короткое описание, карточки правил.</td><td>Длинные вступления и декоративные паттерны без функции.</td></tr><tr><td>Презентации</td><td>Один главный тезис на экран, голубой акцент для вывода или действия.</td><td>Перегружать слайды несколькими равными акцентами.</td></tr><tr><td>Материалы для клиентов</td><td>Показывать надежность, сроки, точность поставки и понятные условия.</td><td>Использовать абстрактные обещания без технической опоры.</td></tr></tbody></table></div><div class="doc-block" id="do-dont"><h2>Можно и нельзя</h2><div class="do-dont-grid"><article class="do-card"><span>Можно</span><h3>Строить чистую рабочую композицию</h3><p>Использовать белый фон, понятные блоки, ровную сетку, технические изображения и один фирменный акцент для главного действия.</p></article><article class="dont-card"><span>Нельзя</span><h3>Создавать визуальный шум</h3><p>Не перегружать материалы декоративными паттернами, случайными эффектами, несколькими равными акцентами и иллюстрациями без связи с ИДМ-ПЛЮС.</p></article></div></div></section><footer class="site-footer">Vlad Kozhevnikov Design</footer></main><aside class="toc"><strong>На странице</strong><a href="#visual-language">Визуальный язык</a><a href="#principles">Принципы</a><a href="#composition">Композиция</a><a href="#usage">Как применять</a><a href="#do-dont">Можно и нельзя</a></aside>
-    </div><div class="no-results" hidden><strong>Ничего не найдено</strong><span>Попробуйте другой запрос.</span></div><script src="app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
