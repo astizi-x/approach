@@ -1085,6 +1085,232 @@ h1 {
   }
 }
 
+/* Responsive safety */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.page,
+.content-page,
+.home-hero,
+.split-hero,
+.download-layout,
+.doc-two-col,
+.typography-grid,
+.home-cards,
+.info-pair,
+.principles,
+.composition,
+.palette-preview,
+.palette-bottom,
+.logo-grid,
+.format-row,
+.status-grid,
+.example-grid,
+.icon-catalog,
+.usage-grid,
+.color-table,
+.rule-table,
+.type-table {
+  min-width: 0;
+}
+
+.home-hero > *,
+.split-hero > *,
+.download-layout > *,
+.doc-two-col > *,
+.typography-grid > *,
+.home-cards > *,
+.info-pair > *,
+.principles > *,
+.composition > *,
+.palette-preview > *,
+.palette-bottom > *,
+.logo-grid > *,
+.format-row > *,
+.status-grid > *,
+.example-grid > *,
+.icon-catalog > *,
+.usage-grid > * {
+  min-width: 0;
+}
+
+.role-card,
+.info-card,
+.principle-card,
+.logo-card,
+.demo-panel,
+.download-aside,
+.brand-logo-stage,
+.icon-catalog,
+.type-panel,
+.font-card,
+.do-card,
+.dont-card {
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.48fr);
+  }
+
+  .home-hero h1 {
+    font-size: clamp(44px, 4.2vw, 60px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .hero-visual {
+    justify-self: start;
+    width: min(620px, 100%);
+  }
+
+  .home-hero h1 span {
+    white-space: normal;
+  }
+
+  .split-hero,
+  .download-layout,
+  .doc-two-col,
+  .palette-bottom {
+    grid-template-columns: 1fr !important;
+  }
+
+  .typography-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .type-panel {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .type-scale {
+    overflow: hidden;
+  }
+
+  .type-row {
+    grid-template-columns: minmax(170px, 240px) minmax(0, 1fr) minmax(150px, 210px) !important;
+    gap: 28px;
+  }
+
+  .type-display {
+    font-size: clamp(48px, 6vw, 74px);
+  }
+
+  .logo-grid,
+  .home-cards,
+  .info-pair,
+  .principles,
+  .composition,
+  .palette-preview,
+  .status-grid,
+  .example-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .download-aside {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-cards,
+  .info-pair,
+  .principles,
+  .composition,
+  .palette-preview,
+  .status-grid,
+  .example-grid,
+  .logo-grid,
+  .usage-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .type-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .type-row-meta {
+    justify-self: start;
+    text-align: left;
+    max-width: none;
+  }
+
+  .type-table,
+  .rule-table,
+  .color-role-table,
+  .visual-table {
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .type-table th,
+  .type-table td,
+  .rule-table th,
+  .rule-table td,
+  .color-role-table th,
+  .color-role-table td,
+  .visual-table th,
+  .visual-table td {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .format-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .content-page,
+  .page {
+    overflow-x: clip;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(38px, 11vw, 54px);
+  }
+
+  .role-link,
+  .font-card,
+  .download-link,
+  .example-control,
+  .usage-grid div {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+  }
+
+  .role-link .arrow,
+  .download-link em {
+    display: none;
+  }
+
+  .format-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .icon-catalog {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .type-table th,
+  .type-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
 /* Asset pass: real icons and stronger hero rhythm. */
 .hero-visual img {
   width: 100%;
@@ -3995,5 +4221,202 @@ body {
   .type-table th:nth-child(4),
   .type-table td:nth-child(4) {
     width: auto;
+  }
+}
+
+/* Final responsive hardening */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.page,
+.content-page,
+.home-hero,
+.split-hero,
+.download-layout,
+.doc-two-col,
+.typography-grid,
+.home-cards,
+.info-pair,
+.principles,
+.composition,
+.palette-preview,
+.palette-bottom,
+.logo-grid,
+.format-row,
+.status-grid,
+.example-grid,
+.icon-catalog,
+.usage-grid {
+  min-width: 0;
+}
+
+.home-hero > *,
+.split-hero > *,
+.download-layout > *,
+.doc-two-col > *,
+.typography-grid > *,
+.home-cards > *,
+.info-pair > *,
+.principles > *,
+.composition > *,
+.palette-preview > *,
+.palette-bottom > *,
+.logo-grid > *,
+.format-row > *,
+.status-grid > *,
+.example-grid > *,
+.icon-catalog > *,
+.usage-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.48fr) !important;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(44px, 4.2vw, 60px) !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .home-hero,
+  .split-hero,
+  .download-layout,
+  .doc-two-col,
+  .palette-bottom,
+  .typography-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-hero {
+    overflow: visible;
+  }
+
+  .home-hero h1 span {
+    white-space: normal !important;
+  }
+
+  .hero-visual,
+  .logos-page .hero-mark {
+    justify-self: start;
+    width: min(620px, 100%) !important;
+  }
+
+  .type-panel {
+    padding-right: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .logo-grid,
+  .home-cards,
+  .info-pair,
+  .principles,
+  .composition,
+  .palette-preview,
+  .status-grid,
+  .example-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .download-aside {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-cards,
+  .info-pair,
+  .principles,
+  .composition,
+  .palette-preview,
+  .status-grid,
+  .example-grid,
+  .logo-grid,
+  .usage-grid,
+  .palette-bottom .do-dont.compact,
+  .do-dont,
+  .do-dont.compact {
+    grid-template-columns: 1fr !important;
+  }
+
+  .type-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .type-row-meta {
+    justify-self: start;
+    max-width: none;
+    text-align: left;
+  }
+
+  .type-table,
+  .rule-table,
+  .color-role-table,
+  .visual-table {
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .type-table th,
+  .type-table td,
+  .rule-table th,
+  .rule-table td,
+  .color-role-table th,
+  .color-role-table td,
+  .visual-table th,
+  .visual-table td {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .format-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .content-page,
+  .page {
+    overflow-x: clip;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(38px, 11vw, 54px) !important;
+  }
+
+  .role-link,
+  .font-card,
+  .download-link,
+  .example-control,
+  .usage-grid div {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+  }
+
+  .role-link .arrow,
+  .download-link em {
+    display: none;
+  }
+
+  .format-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .icon-catalog {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .type-table th,
+  .type-table td {
+    padding: 10px 8px;
+    font-size: 13px;
   }
 }
