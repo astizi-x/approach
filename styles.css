@@ -5231,3 +5231,48 @@ canvas {
     grid-template-columns: 70px minmax(0, 1fr) !important;
   }
 }
+
+/* Final header icon order and burger alignment */
+@media (max-width: 1180px) {
+  .menu-toggle {
+    order: 2 !important;
+  }
+
+  .search-toggle {
+    order: 3 !important;
+  }
+
+  .menu-toggle span {
+    left: 50% !important;
+    right: auto !important;
+    width: 18px !important;
+    height: 1.5px !important;
+    transform: translateX(-50%);
+  }
+
+  .menu-toggle span:nth-child(1) {
+    top: calc(50% - 7px) !important;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    top: 50% !important;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    top: calc(50% + 7px) !important;
+  }
+
+  .nav-open .menu-toggle span:nth-child(1) {
+    top: 50% !important;
+    transform: translateX(-50%) rotate(45deg) !important;
+  }
+
+  .nav-open .menu-toggle span:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  .nav-open .menu-toggle span:nth-child(3) {
+    top: 50% !important;
+    transform: translateX(-50%) rotate(-45deg) !important;
+  }
+}
