@@ -1,10 +1,26 @@
 (function () {
   const body = document.body;
+  const siteHeader = document.querySelector(".site-header");
+  const topNav = document.querySelector(".top-nav");
   const searchToggle = document.querySelector(".search-toggle");
   const searchPanel = document.querySelector(".search-panel");
   const searchClose = document.querySelector(".search-close");
   const searchInput = document.querySelector("#globalSearch");
   const copyStatus = document.querySelector("#copyStatus");
+
+  let menuToggle = document.querySelector(".menu-toggle");
+
+  if (siteHeader && topNav && !menuToggle) {
+    menuToggle = document.createElement("button");
+    menuToggle.className = "menu-toggle";
+    menuToggle.type = "button";
+    menuToggle.setAttribute("aria-label", "Открыть меню");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-controls", "mainNavigation");
+    menuToggle.innerHTML = "<span></span><span></span><span></span>";
+    topNav.id = topNav.id || "mainNavigation";
+    siteHeader.insertBefore(menuToggle, searchToggle || null);
+  }
 
   const siteSearchIndex = [
     {
@@ -89,6 +105,23 @@
     if (searchInput) searchInput.value = "";
   }
 
+  function closeMenu() {
+    body.classList.remove("nav-open");
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Открыть меню");
+    }
+  }
+
+  function toggleMenu() {
+    const willOpen = !body.classList.contains("nav-open");
+    body.classList.toggle("nav-open", willOpen);
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", String(willOpen));
+      menuToggle.setAttribute("aria-label", willOpen ? "Закрыть меню" : "Открыть меню");
+    }
+  }
+
   function renderSearchResults() {
     if (!searchInput || !searchResults) return;
     const tokens = normalize(searchInput.value).split(/\s+/).filter(Boolean);
@@ -125,7 +158,17 @@
     searchResults.hidden = false;
   }
 
-  if (searchToggle) searchToggle.addEventListener("click", openSearch);
+  if (menuToggle) menuToggle.addEventListener("click", toggleMenu);
+  if (topNav) {
+    topNav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+  }
+
+  if (searchToggle) searchToggle.addEventListener("click", () => {
+    closeMenu();
+    openSearch();
+  });
   if (searchClose) searchClose.addEventListener("click", closeSearch);
   if (searchInput) {
     searchInput.addEventListener("input", renderSearchResults);
@@ -144,7 +187,10 @@
       openSearch();
       return;
     }
-    if (event.key === "Escape") closeSearch();
+    if (event.key === "Escape") {
+      closeSearch();
+      closeMenu();
+    }
   });
 
   if (searchPanel) {
